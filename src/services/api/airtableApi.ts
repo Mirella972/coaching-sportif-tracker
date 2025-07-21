@@ -1,4 +1,5 @@
 
+import { Process } from "framer-motion";
 import { toast } from "sonner";
 
 class AirtableApiService {
@@ -9,8 +10,8 @@ class AirtableApiService {
 
   constructor() {
     // Configuration par défaut avec le token fourni
-    this.baseId = 'app8673yjmXB3WcDT';
-    this.apiKey = 'patonRA3u98xVvNJJ.f9e96523d613a3d8bfb9d1c38608758807870378424b17b53a7770b941a47722';
+    this.baseId = import.meta.env?.VITE_AIRTABLE_BASE_ID || '';
+    this.apiKey = import.meta.env?.VITE_AIRTABLE_API_KEY || '';
   }
 
   public configure(baseId: string, apiKey: string) {

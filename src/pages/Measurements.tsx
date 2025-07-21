@@ -74,7 +74,7 @@ const Measurements = () => {
     const firstName = student.name.split(' ')[0];
     const accessCode = student.accessCode || '';
     
-    window.open(`https://app.youform.com/forms/l0zyez4p?nom=${firstName}&id=${accessCode}`, '_blank');
+    window.open(`https://app.youform.com/forms/nyx7zhof?nom=${firstName}&id=${accessCode}`, '_blank');
   };
 
   if (!student) return null;

@@ -1,14 +1,14 @@
 
-import { toast } from "sonner";
+//import { toast } from "sonner";
 import AirtableApiService from "../api/airtableApi";
 import { Student } from "../types/airtable.types";
 
 class AuthService {
   // Identifiant de la table Élèves dans Airtable
-  private tableId = "tbll5MlIcTSqCOLEJ";
+  private tableId = import.meta.env?.VITE_AIRTABLE_TABLE_ID || '';
   
   // Base ID pour les diagnostics
-  private baseId = "app8673yjmXB3WcDT";
+  private baseId = import.meta.env?.VITE_AIRTABLE_BASE_ID || '';
 
   // Authentication
   async verifyAccess(accessCode: string): Promise<Student | null> {
